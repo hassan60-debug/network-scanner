@@ -1,30 +1,34 @@
-# packet-sniffer
-A Python network packet sniffer built with Scapy to analyze real-time network traffic
-# 📡 Network Packet Sniffer
+# 🌐 Network Scanner
 
-A real-time network packet sniffer built with Python and Scapy that captures and analyzes live network traffic.
+A Python tool that discovers all devices connected to a WiFi network using Nmap.
 
 ## Features
-- Captures live network packets in real-time
-- Identifies TCP, UDP, and ICMP protocols
-- Displays source and destination IPs
-- Shows port numbers for each connection
-- Detects DNS queries, HTTPS traffic, and ping packets
+- Scans entire network range automatically
+- Displays IP address of each device
+- Shows hostname where available
+- Identifies router and connected devices
+- Detects unauthorized devices on network
 
 ## Usage
 ```bash
-python packet_sniffer.py
+python network_scanner.py
 ```
-> Run as Administrator on Windows for full packet capture
+> Run as Administrator on Windows
 
 ## Example Output
-[TCP] 192.168.0.107 → 84.32.102.196 | Port 52526 → 443
-[UDP] 192.168.0.107 → 192.168.0.1 | Port 55174 → 53
-[ICMP] 192.168.0.107 → 84.32.61.171 | Ping packet
+5 device(s) found on network:
+
+IP : 192.168.0.1
+Hostname : Unknown
+Status : UP
+
+IP : 192.168.0.107
+Hostname : DESKTOP-NDQQQHI
+Status : UP
 
 
 ## Technologies
 - Python
-- Scapy
-- Network Traffic Analysis
-- Protocol Analysis (TCP/UDP/ICMP)
+- Nmap
+- python-nmap library
+- Network Discovery
